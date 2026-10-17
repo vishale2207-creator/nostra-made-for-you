@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the Nostra collection. Search and filter everyday favorites by category, size, and price."
+    />
+    <meta name="theme-color" content="#f6f4ed" />
+    <title>The Collection — Nostra</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="catalog.js" defer></script>
+    <script src="collection.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <p>Good things, thoughtfully made. Free shipping on orders over $100.</p>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html#home" aria-label="Nostra home">nostra<span>.</span></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#new-arrivals">New arrivals</a>
+        <a href="index.html#bestsellers">Most wanted</a>
+        <a href="collection.html" aria-current="page">Collection</a>
+        <a href="index.html#mens-collection">Men's collection</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+      <div class="header-actions">
+        <a class="favorites-link" href="index.html#favorites">Favorites <span class="favorites-count">0</span></a>
+        <a class="bag-link" href="#shopping-bag" aria-label="Shopping bag, 0 items" aria-controls="shopping-bag">
+          Bag <span class="bag-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="cart-layer" hidden>
+      <button class="cart-backdrop" type="button" aria-label="Close shopping bag"></button>
+      <aside
+        class="cart-drawer"
+        id="shopping-bag"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="cart-title"
+        tabindex="-1"
+      >
+        <div class="cart-header">
+          <div>
+            <p class="eyebrow">Your good picks</p>
+            <h2 id="cart-title">Your bag <span class="cart-heading-count">(0)</span></h2>
+          </div>
+          <button class="cart-close" type="button" aria-label="Close shopping bag">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <p class="cart-empty">Your bag is waiting for something lovely.</p>
+        <div class="cart-summary">
+          <div class="cart-subtotal-row">
+            <span>Subtotal</span>
+            <span class="cart-subtotal">$0.00</span>
+          </div>
+          <p>Shipping and taxes are calculated at checkout.</p>
+          <button class="cart-continue" type="button">Continue shopping</button>
+        </div>
+      </aside>
+    </div>
+
+    <main>
+      <section class="collection-page-intro">
+        <p class="eyebrow">Made for the everyday</p>
+        <h1>Find your <em>favorites.</em></h1>
+        <p>Easy pieces for all the ways your days unfold.</p>
+      </section>
+
+      <section class="collection-page section-wrap" aria-labelledby="collection-page-title">
+        <div class="collection-page-heading">
+          <div>
+            <p class="eyebrow">The good stuff, all in one place</p>
+            <h2 id="collection-page-title">Shop the <em>collection</em></h2>
+          </div>
+          <p class="collection-page-count" aria-live="polite"></p>
+        </div>
+
+        <form class="collection-page-search" role="search">
+          <label class="visually-hidden" for="collection-page-query">Search products</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="collection-page-query"
+            type="search"
+            placeholder="Search pieces, colors, or fabrics"
+            autocomplete="off"
+          />
+          <button type="reset" aria-label="Clear search">Clear</button>
+        </form>
+
+        <form class="collection-filters" aria-label="Filter products">
+          <label>
+            Category
+            <select id="filter-category" name="category">
+              <option value="all">All pieces</option>
+              <option value="women">Women's</option>
+              <option value="men">Men's everyday</option>
+              <option value="beachwear">Men's beachwear</option>
+              <option value="gymwear">Men's gymwear</option>
+            </select>
+          </label>
+          <label>
+            Size
+            <select id="filter-size" name="size">
+              <option value="all">All sizes</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+              <option value="One size">One size</option>
+            </select>
+          </label>
+          <label>
+            Price
+            <select id="filter-price" name="price">
+              <option value="all">Any price</option>
+              <option value="under-75">Under $75</option>
+              <option value="75-100">$75–$100</option>
+              <option value="over-100">$100 and up</option>
+            </select>
+          </label>
+          <button class="clear-filters-button" type="reset">Clear filters</button>
+        </form>
+
+        <div class="collection-page-grid" id="collection-products"></div>
+        <p class="collection-page-empty" hidden>No pieces match those filters. Try adjusting your search.</p>
+        <button class="view-more-button collection-view-more" type="button" aria-expanded="false">View more</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="index.html#home">nostra<span>.</span></a>
+      <p>Getting dressed should feel like you.</p>
+      <div class="footer-links">
+        <a href="index.html#new-arrivals">Shop</a>
+        <a href="index.html#our-story">Our story</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      <span class="copyright">© <span id="current-year"></span> Nostra Studio</span>
+    </footer>
+  </body>
+</html>

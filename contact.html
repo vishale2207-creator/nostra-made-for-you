@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -109,3 +110,116 @@
     </footer>
   </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Nostra. We're happy to help with your questions."
+    />
+    <meta name="theme-color" content="#f6f4ed" />
+    <title>Contact us — Nostra</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="contact.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <p>Good things, thoughtfully made. Free shipping on orders over $100.</p>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html#home" aria-label="Nostra home">nostra<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#new-arrivals">New arrivals</a>
+        <a href="index.html#bestsellers">Most wanted</a>
+        <a href="collection.html">Collection</a>
+        <a href="index.html#mens-collection">Men's collection</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+      </nav>
+
+      <a class="bag-link" href="index.html#bestsellers" aria-label="Shopping bag, 0 items">
+        Bag <span class="bag-count">0</span>
+      </a>
+    </header>
+
+    <main class="contact-page-main">
+      <section class="contact-section contact-page-card" aria-labelledby="contact-title">
+        <p class="eyebrow">We're always happy to help</p>
+        <h1 id="contact-title">Questions? <em>Say hello.</em></h1>
+        <p>
+          Need a hand finding your fit or choosing a favorite? We'd love to hear
+          from you.
+        </p>
+        <form class="contact-form">
+          <div class="contact-form-field">
+            <label for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="contact-form-field">
+            <label for="contact-phone">Phone number</label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              placeholder="Your phone number"
+              autocomplete="tel"
+              required
+            />
+          </div>
+          <div class="contact-form-field">
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <button class="contact-submit-button" type="submit">
+            Send message <span aria-hidden="true">↗</span>
+          </button>
+          <p class="contact-form-message" aria-live="polite"></p>
+        </form>
+        <a class="contact-back-link" href="index.html#home">Back to Nostra <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="index.html#home">nostra<span>.</span></a>
+      <p>Getting dressed should feel like you.</p>
+      <div class="footer-links">
+        <a href="index.html#new-arrivals">Shop</a>
+        <a href="index.html#our-story">Our story</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+      </div>
+      <span class="copyright">© <span id="current-year"></span> Nostra Studio</span>
+    </footer>
+  </body>
+</html>
+>>>>>>> b6d0279 (collection updated)
