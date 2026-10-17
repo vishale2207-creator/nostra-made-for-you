@@ -2,7 +2,7 @@
 
 **Live Website:** [ https://vishale2207-creator.github.io/nostra-made-for-you/]
 
-**GitHub Repository:** [Paste your GitHub link here]
+**GitHub Repository:** [https://github.com/vishale2207-creator/nostra-made-for-you]
 
 Presenting my latest project — **Nostra**, a modern fashion shopping website designed to deliver a clean, interactive, and user-friendly browsing experience.
 
